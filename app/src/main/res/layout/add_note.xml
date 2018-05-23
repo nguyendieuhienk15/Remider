@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/addNoteLayout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/add_note"
+                android:textSize="@dimen/text_heading1"/>
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/note_title"
+                android:textSize="@dimen/text_heading2"
+                android:imeOptions="actionDone"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/editTextMemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter memo"
+                android:imeOptions="actionDone"
+                android:inputType="text"/>
+
+            <include layout="@layout/date"/>
+            <include layout="@layout/time"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginBottom="@dimen/margin"
+                android:id="@+id/alarm"
+                android:text="Set Alarm"
+                android:textSize="@dimen/text_heading2" />
+
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onSaveButtonClick"
+                android:text="@string/save"
+                android:textSize="@dimen/text_heading2"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="296dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
